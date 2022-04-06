@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap");
+// 主設定一定要在最上層
+$color-main: #000000;
+$color-sub: #80ed99;
+$text: "Grandstander", cursive;
+$color-bg: #f9f9f9;
+
+//RWD
+$desktop: 1025px;
+$title: 1024px;
+$phone: 767px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+    color: $color-main;
+}
+
+// 頁首樣式
+#navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 120px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    // 固定頁首:寬度會跑掉
+    position: fixed;
+    width: 100%;
+    background: white;
+    // 字會穿透首頁，使用z-index調整
+    z-index: 1;
+    grid-template-areas: "logo link social ";
+
+    //平板
+    @media screen and (max-width: $title) {
+        grid-template-areas: "logo social menux";
+    }
+    //手機
+    @media screen and (max-width: $phone) {
+        grid-template-areas: "logo social menux";
+        padding: 10px 6px;
+    }
+    // 選單
+    #menux {
+        grid-area: menux;
+
+        // 切換到桌面時隱藏 none
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+        //切換到平板時顯示 display預設屬性block
+        @media screen and (max-width: $title) {
+            display: block;
+            margin-left: auto;
+        }
+        //手機
+        @media screen and (max-width: $phone) {
+            width: 32px;
+        }
+    }
+}
+// 左邊Logo
+.logo {
+    text-decoration: none;
+    font-family: $text;
+    font-size: 32px;
+    grid-area: logo;
+    &:hover {
+        color: $color-sub;
+    }
+}
+// 中間連結(關於我、作品集、連絡我)
+.link {
+    align-items: center;
+    margin: 0 auto;
+    grid-area: link;
+    a {
+        text-decoration: none;
+        font-family: "Grandstander", cursive;
+        font-size: 20px;
+        margin-left: 30px;
+        transition: 0.5s;
+        padding: 0 10px;
+
+        &:hover {
+            color: $color-sub;
+        }
+    }
+    //RWD平板
+    @media screen and (max-width: $title) {
+        display: none;
+    }
+}
+
+.social {
+    text-align: right;
+    grid-area: social;
+    //平板
+    @media screen and (max-width: $title) {
+        text-align: center;
+    }
+
+    img {
+        transition: 0.5s;
+        width: 20px;
+        margin-left: 30px;
+        //手機
+        @media screen and (max-width: $phone) {
+            margin-left: 0;
+        }
+        &:hover {
+            filter: invert(100%) sepia(22%) saturate(4189%) hue-rotate(56deg) brightness(97%) contrast(90%);
+        }
+    }
+}
+
+// banner
+#banner {
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    // 溢出:隱藏
+    overflow: hidden;
+    // overlow之後 dots會不見使用bottom頂起來!
+    .dots {
+        bottom: 80px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    //平板
+    @media screen and (max-width: $title) {
+        height: 100%;
+        .slick-track {
+            height: 900px;
+        }
+        img {
+          
+            object-fit: cover;
+        }
+    }
+    //手機
+    @media screen and (max-width: $phone) {
+        .slick-track {
+            height: 500px;
+        }
+        img {
+            
+            object-fit: cover;
+        }
+        
+    }
+}
+
+// 關於我
+#about-me {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    h2 {
+        margin-top: 50px;
+        font-size: 200px;
+        font-family: $text;
+        //手機
+        @media screen and (max-width: $phone) {
+            font-size: 60px;
+        }
+    }
+    p {
+        font-family: $text;
+        padding: 30px;
+        margin-bottom: 50px;
+        font-size: 20px;
+        //手機
+        @media screen and (max-width: $phone) {
+            font-size: 16px;
+        }
+    }
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 32px;
+    font-family: $text;
+    text-align: center;
+}
+.button {
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px 60px;
+    &:hover {
+        transition: 0.5s;
+        background: #000;
+        color: white;
+    }
+}
+
+
+// 作品集
+#works {
+    height: 100%;
+    font-family: $text;
+    background: $color-bg;
+
+    //平板
+    @media screen and (max-width: $title) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    //手機
+    @media screen and (max-width: $phone) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    // 控制6個class
+    #work-box {
+        width: 1200px;
+        display: grid;
+        margin: 0 auto;
+        // repeat(顯示的格數,單位)
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        //平板
+        @media screen and (max-width: $title) {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 20px;
+        }
+        //手機
+        @media screen and (max-width: $phone) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .work-box-small {
+            img {
+                display: block;
+                width: 100%;
+                height: 300px;
+                background-color: #eee;
+                margin: 10px 0;
+                object-fit: cover;
+            }
+            h2 {
+                text-align: center;
+                // 位移
+                transform: translateY(-32px);
+            }
+            //行內元素改成區塊display block (佔一整行)
+            //行內區塊元素display:inline-block(字多大就多大)
+            span {
+                display: inline-block;
+                border: 1px #000 solid;
+                border-radius: 10px;
+                padding: 5px 10px;
+                transition: 0.3s;
+                &:hover {
+                    background-color: #000;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// 頁尾
+footer {
+    background-color: #000;
+    padding: 50px;
+    text-align: center;
+    #logo {
+        color: white;
+        text-decoration: none;
+    }
+    .link {
+        a {
+            color: white;
+        }
+    }
+    .social {
+        text-align: center;
+        margin: 15px 0;
+        img {
+            filter: invert(100%) sepia(0%) saturate(7493%) hue-rotate(186deg) brightness(97%) contrast(101%);
+            margin: 30px 20px;
+        }
+    }
+    #coperight {
+        color: white;
+        margin-top: 50px;
+        font-size: 12px;
+    }
+}
+
+// 返回頂端
+#arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    // 滑鼠移動到這個元素顯示手指頭
+    cursor: pointer;
+}
+
+.area1{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    .area1_1{
+        a{
+            color: red;
+            font-size: 16px;
+        }
+    }
+}

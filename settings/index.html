@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設定</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="area1">
+        <h2 class="area1_1">輪播圖五張設定 <a href="https://upload.cc/" target="_blank"> 須至這個連結處上傳圖片</a></h2>
+        <hr>
+        <div class="slide">
+            <label for="">第一張</label>
+            <input type="text" name="" id="img1">
+            <input type="submit" class="sent1" data-imgsss="img1" value="送出">
+        </div>
+        <div class="slide">
+            <label for="">第二張</label>
+            <input type="text" name="" id="img2">
+            <input type="submit" class="sent1" data-imgsss="img2" value="送出">
+        </div>
+        <div class="slide">
+            <label for="">第三張</label>
+            <input type="text" name="" id="img3">
+            <input type="submit" class="sent1" data-imgsss="img3" value="送出">
+        </div>
+        <div class="slide">
+            <label for="">第四張</label>
+            <input type="text" name="" id="img4">
+            <input type="submit" class="sent1" data-imgsss="img4" value="送出">
+        </div>
+        <div class="slide">
+            <label for="">第五張</label>
+            <input type="text" name="" id="img5">
+            <input type="submit" class="sent1" data-imgsss="img5" value="送出">
+        </div>
+    </div>
+    <div class="area1">
+        <h2 class="area1_1">第二區文字修改</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">上文字</label>
+            <input type="text" name="" id="data1">
+            <input type="submit" class="sent2"  data-texttt="data1" value="送出">
+        </div>
+        <div class="about_data">
+            <label for="">中文字</label>
+            <input type="text" name="" id="data2">
+            <input type="submit" class="sent2" data-texttt="data2" value="送出">
+        </div>
+        <div class="about_data">
+            <label for="">下文字</label>
+            <input type="text" name="" id="data3">
+            <input type="submit" class="sent2" data-texttt="data3" value="送出">
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous'></script>
+    <script src="../setting.js"></script>
+</body>
+
+</html>
