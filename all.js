@@ -43,7 +43,7 @@ aboutData.once('value',function(snapshot){
         <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine"
             data-aos-mirror="false">${data.data1.text}</h1>
         <h2 data-aos="fade-down" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500"
-            data-aos-easing="ease-in-sine" data-aos-mirror="false">${data.data2.text}</h2>
+            data-aos-easing="ease-in-sine" data-aos-mirror="false" >${data.data2.text}</h2>
         <p>${data.data3.text}</p>
         
         `
