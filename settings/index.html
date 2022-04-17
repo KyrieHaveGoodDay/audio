@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>設定</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        ul li,
+            ol li {
+                margin-left: 25px;
+                letter-spacing: 2px;
+            }
+    </style>
 </head>
 
 <body>
@@ -41,7 +48,7 @@
         </div>
     </div>
     <div class="area1">
-        <h2 class="area1_1">第二區文字修改</h2>
+        <h2 class="area1_1">關於東方管球科技</h2>
         <hr>
         <div class="about_data">
             <label for="">上文字</label>
@@ -59,6 +66,111 @@
             <input type="submit" class="sent2" data-texttt="data3" value="送出">
         </div>
     </div>
+    <!-- 第一組照片 -->
+    <div class="area1">
+        <h2 class="area1_1">第一組照片</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">第一張照片</label>
+            <input type="text" name="" id="introduce_one_img1">
+            <input type="submit" class="sent3" data-img1="introduce_one_img1" value="送出">
+        </div>
+        <div class="about_data">
+            <label for="">第二張照片</label>
+            <input type="text" name="" id="introduce_one_img2">
+            <input type="submit" class="sent3" data-img1="introduce_one_img2" value="送出">
+        </div>
+        <div class="about_data">
+            <label for="">第三張照片</label>
+            <input type="text" name="" id="introduce_one_img3">
+            <input type="submit" class="sent3" data-img1="introduce_one_img3" value="送出">
+        </div>
+    </div>
+
+    <div class="area1">
+        <h2 class="area1_1">第一組-產品規格</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">請輸入文字</label>
+            <input type="text" name="" id="introduce_one_details">
+            <input type="submit" class="sent3_1" data-details="introduce_one_details" value="送出">
+        </div>
+        <ol id="details_mainData"></ol>
+    </div>
+    <div class="area1">
+        <h2 class="area1_1">第一組-詳細介紹</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">請輸入文字</label>
+            <input type="text" name="" id="introduce_one_introduce">
+            <input type="submit" class="sent3_2" data-details="introduce_one_introduce" value="送出">
+        </div>
+        <ol id="details_introduce">
+            
+        </ol>
+    </div>
+    <div class="area1">
+        <h2 class="area1_1">第一組-設計特點</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">請輸入文字</label>
+            <input type="text" name="" id="introduce_one_design">
+            <input type="submit" class="sent3_3" data-details="introduce_one_design" value="送出">
+        </div>
+        <ol id="details_design"></ol>
+    </div>
+
+    <!-- 第二組照片 -->
+    <div class="area1">
+        <h2 class="area1_1">第二組照片<a href="https://upload.cc/" target="_blank"> 須至這個連結處上傳圖片</a></h2>
+        <hr>
+        <div class="about_data">
+            <label for="">第一張照片</label>
+            <input type="text" name="" id="introduce_two_img1">
+            <input type="submit" class="sent4" data-img2="introduce_two_img1" value="送出">
+        </div>
+        <div class="about_data">
+            <label for="">第二張照片</label>
+            <input type="text" name="" id="introduce_two_img2">
+            <input type="submit" class="sent4" data-img2="introduce_two_img2" value="送出">
+        </div>
+        <div class="about_data">
+            <label for="">第三張照片</label>
+            <input type="text" name="" id="introduce_two_img3">
+            <input type="submit" class="sent4" data-img2="introduce_two_img3" value="送出">
+        </div>
+    </div>
+    <div class="area1">
+        <h2 class="area1_1">第二組-產品規格</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">請輸入文字</label>
+            <input type="text" name="" id="introduce_two_introduce">
+            <input type="submit" class="sent4_1" data-details="introduce_two_introduce" value="送出">
+        </div>
+        <ol id="details_two_mainData"></ol>
+    </div>
+    <div class="area1">
+        <h2 class="area1_1">第二組-詳細介紹</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">請輸入文字</label>
+            <input type="text" name="" id="details_two_introduce">
+            <input type="submit" class="sent4_2" data-details="details_two_introduce" value="送出">
+        </div>
+        <ol id="details_two_introduce_data"></ol>
+    </div>
+    <div class="area1">
+        <h2 class="area1_1">第二組-設計特點</h2>
+        <hr>
+        <div class="about_data">
+            <label for="">請輸入文字</label>
+            <input type="text" name="" id="details_two_design">
+            <input type="submit" class="sent4_3" data-details="details_two_design" value="送出">
+        </div>
+        <ol id="details_two_design_data"></ol>
+    </div>
+
 
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>

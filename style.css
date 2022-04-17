@@ -72,6 +72,18 @@
   grid-area: logo;
 }
 
+@media screen and (max-width: 767px) {
+  .logo {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .logo {
+    font-size: 16px;
+  }
+}
+
 .logo:hover {
   color: #80ed99;
 }
@@ -145,6 +157,12 @@
   overflow: hidden;
 }
 
+@media screen and (min-width: 1600px) {
+  #banner {
+    height: 1700px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   #banner {
     padding-top: 50px;
@@ -192,7 +210,7 @@
 
 #about-me h2 {
   margin-top: 50px;
-  font-size: 200px;
+  font-size: 80px;
   font-family: "Grandstander", cursive;
 }
 
@@ -241,74 +259,59 @@
   background: #f9f9f9;
 }
 
-@media screen and (max-width: 1024px) {
-  #works {
-    height: auto;
-    padding-bottom: 100px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   #works {
-    height: auto;
-    padding-bottom: 100px;
+    padding: 0 10px;
   }
 }
 
-#works #work-box {
+#works .introduce {
   width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  #works .introduce {
+    width: 100%;
+  }
+}
+
+#works .introduce .introduce_img {
   display: -ms-grid;
   display: grid;
-  margin: 0 auto;
+  grid-gap: 10px;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-@media screen and (max-width: 1024px) {
-  #works #work-box {
-    width: 100%;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    padding: 0 20px;
-  }
 }
 
 @media screen and (max-width: 767px) {
-  #works #work-box {
+  #works .introduce .introduce_img {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
 }
 
-#works #work-box .work-box-small img {
-  display: block;
+#works .introduce .introduce_img img {
   width: 100%;
-  height: 300px;
-  background-color: #eee;
-  margin: 10px 0;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#works #work-box .work-box-small h2 {
-  text-align: center;
-  -webkit-transform: translateY(-32px);
-          transform: translateY(-32px);
+#works .introduce .details .details_title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-#works #work-box .work-box-small span {
-  display: inline-block;
-  border: 1px #000 solid;
-  border-radius: 10px;
-  padding: 5px 10px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-#works #work-box .work-box-small span:hover {
-  background-color: #000;
-  color: white;
+#works .introduce .details ul li,
+#works .introduce .details ol li {
+  margin-left: 25px;
+  letter-spacing: 2px;
 }
 
 footer {

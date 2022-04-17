@@ -67,6 +67,12 @@ $phone: 767px;
     font-family: $text;
     font-size: 32px;
     grid-area: logo;
+    @media screen and (max-width: $phone) {
+        font-size: 24px;
+    }
+    @media screen and (max-width: 414px) {
+        font-size: 16px;
+    }
     &:hover {
         color: $color-sub;
     }
@@ -125,14 +131,16 @@ $phone: 767px;
     // 溢出:隱藏
     overflow: hidden;
     // overlow之後 dots會不見使用bottom頂起來!
+    @media screen and (min-width: 1600px) {
+        height: 1700px;
+    }
     @media screen and (max-width: 414px) {
         padding-top: 50px;
-        
     }
     .dots {
         bottom: 80px;
     }
-    img{
+    img {
         width: 100%;
         // height: 100%;
         object-fit: contain;
@@ -144,7 +152,6 @@ $phone: 767px;
             height: 900px;
         }
         img {
-          
             object-fit: cover;
         }
     }
@@ -154,10 +161,8 @@ $phone: 767px;
             height: 500px;
         }
         img {
-            
             object-fit: cover;
         }
-        
     }
 }
 
@@ -169,7 +174,7 @@ $phone: 767px;
 
     h2 {
         margin-top: 50px;
-        font-size: 200px;
+        font-size: 80px;
         font-family: $text;
         //手機
         @media screen and (max-width: $phone) {
@@ -205,67 +210,48 @@ $phone: 767px;
     }
 }
 
-
-// 作品集
+// 真空管規格
 #works {
     height: 100%;
     font-family: $text;
     background: $color-bg;
-
-    //平板
-    @media screen and (max-width: $title) {
-        height: auto;
-        padding-bottom: 100px;
-    }
-    //手機
     @media screen and (max-width: $phone) {
-        height: auto;
-        padding-bottom: 100px;
+     padding: 0 10px;
     }
-    // 控制6個class
-    #work-box {
+    .introduce {
         width: 1200px;
-        display: grid;
         margin: 0 auto;
-        // repeat(顯示的格數,單位)
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        //平板
-        @media screen and (max-width: $title) {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 1200px) {
             width: 100%;
-            grid-template-columns: repeat(2, 1fr);
-            padding: 0 20px;
         }
-        //手機
-        @media screen and (max-width: $phone) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        .work-box-small {
+        .introduce_img {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            @media screen and (max-width: $phone) {
+                grid-template-columns: repeat(1, 1fr);
+            }
             img {
-                display: block;
                 width: 100%;
-                height: 300px;
-                background-color: #eee;
-                margin: 10px 0;
+                height: 400px;
                 object-fit: cover;
+                
             }
-            h2 {
-                text-align: center;
-                // 位移
-                transform: translateY(-32px);
+        }
+        .details {
+            .details_title {
+                font-weight: bold;
+                font-size: 20px;
+                margin-top: 10px;
             }
-            //行內元素改成區塊display block (佔一整行)
-            //行內區塊元素display:inline-block(字多大就多大)
-            span {
-                display: inline-block;
-                border: 1px #000 solid;
-                border-radius: 10px;
-                padding: 5px 10px;
-                transition: 0.3s;
-                &:hover {
-                    background-color: #000;
-                    color: white;
-                }
+            ul li,
+            ol li {
+                margin-left: 25px;
+                letter-spacing: 2px;
             }
         }
     }
@@ -312,11 +298,11 @@ footer {
     cursor: pointer;
 }
 
-.area1{
+.area1 {
     margin-left: 10px;
     margin-bottom: 20px;
-    .area1_1{
-        a{
+    .area1_1 {
+        a {
             color: red;
             font-size: 16px;
         }
