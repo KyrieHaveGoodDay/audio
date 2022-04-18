@@ -39,7 +39,7 @@ $phone: 767px;
     }
     //手機
     @media screen and (max-width: $phone) {
-        grid-template-areas: "logo social menux";
+        grid-template-areas: "logo link social ";
         padding: 10px 6px;
     }
     // 選單
@@ -89,15 +89,17 @@ $phone: 767px;
         margin-left: 30px;
         transition: 0.5s;
         padding: 0 10px;
-
+        //RWD平板
+    @media screen and (max-width: 414px) {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
         &:hover {
             color: $color-sub;
         }
     }
-    //RWD平板
-    @media screen and (max-width: $title) {
-        display: none;
-    }
+    
 }
 
 .social {
@@ -273,15 +275,15 @@ footer {
     }
     .social {
         text-align: center;
-        margin: 15px 0;
+        // margin: 15px 0;
         img {
             filter: invert(100%) sepia(0%) saturate(7493%) hue-rotate(186deg) brightness(97%) contrast(101%);
-            margin: 30px 20px;
+            margin: 10px 20px;
         }
     }
     #coperight {
         color: white;
-        margin-top: 50px;
+        // margin-top: 50px;
         font-size: 12px;
     }
 }

@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 767px) {
   #navigation {
-        grid-template-areas: "logo social menux";
+        grid-template-areas: "logo link social ";
     padding: 10px 6px;
   }
 }
@@ -108,14 +108,16 @@
   padding: 0 10px;
 }
 
-.link a:hover {
-  color: #80ed99;
+@media screen and (max-width: 414px) {
+  .link a {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-@media screen and (max-width: 1024px) {
-  .link {
-    display: none;
-  }
+.link a:hover {
+  color: #80ed99;
 }
 
 .social {
@@ -331,18 +333,16 @@ footer .link a {
 
 footer .social {
   text-align: center;
-  margin: 15px 0;
 }
 
 footer .social img {
   -webkit-filter: invert(100%) sepia(0%) saturate(7493%) hue-rotate(186deg) brightness(97%) contrast(101%);
           filter: invert(100%) sepia(0%) saturate(7493%) hue-rotate(186deg) brightness(97%) contrast(101%);
-  margin: 30px 20px;
+  margin: 10px 20px;
 }
 
 footer #coperight {
   color: white;
-  margin-top: 50px;
   font-size: 12px;
 }
 
