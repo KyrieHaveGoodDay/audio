@@ -1,0 +1,38 @@
+.product_list{
+    padding-top: 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.data_title{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 25% 15% 15%;
+    .data_text{
+        text-align: center;
+        border: 1px solid #000;
+        font-size: 20px;
+    }
+}
+.data_content{
+    list-style: none;
+    li{
+        display: grid;
+        grid-template-columns: 15% 15% 15% 25% 15% 15%;
+        text-align: center;
+        justify-content: center;
+        // align-items: center ;
+        
+        div{
+        border: 1px solid #000;
+            // height: 300px;
+            span{
+                position: relative;
+                top: 50%;
+            }
+        }
+        
+        img{
+            width: 50%;
+        }
+    }
+}

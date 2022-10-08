@@ -1,5 +1,53 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap");
+.product_list {
+  padding-top: 100px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.data_title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 15% 15% 25% 15% 15%;
+      grid-template-columns: 15% 15% 15% 25% 15% 15%;
+}
+
+.data_title .data_text {
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 20px;
+}
+
+.data_content {
+  list-style: none;
+}
+
+.data_content li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 15% 15% 25% 15% 15%;
+      grid-template-columns: 15% 15% 15% 25% 15% 15%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.data_content li div {
+  border: 1px solid #000;
+}
+
+.data_content li div span {
+  position: relative;
+  top: 50%;
+}
+
+.data_content li img {
+  width: 50%;
+}
+
 * {
   margin: 0;
   padding: 0;
