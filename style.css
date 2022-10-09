@@ -345,6 +345,11 @@ footer #coperight {
 .pds {
   padding-top: 100px;
 }
+@media screen and (max-width: 500px) {
+  .pds {
+    padding-top: 60px;
+  }
+}
 
 .p_title {
   font-size: 24px;
