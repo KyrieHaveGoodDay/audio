@@ -222,41 +222,42 @@ $phone: 767px;
     @media screen and (max-width: $phone) {
      padding: 0 10px;
     }
-    .introduce {
-        width: 1200px;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        @media screen and (max-width: 1200px) {
+    
+}
+.introduce {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
+    .introduce_img {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        @media screen and (max-width: $phone) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        img {
             width: 100%;
+            height: 400px;
+            object-fit: cover;
+            
         }
-        .introduce_img {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: repeat(3, 1fr);
-            @media screen and (max-width: $phone) {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            img {
-                width: 100%;
-                height: 400px;
-                object-fit: cover;
-                
-            }
+    }
+    .details {
+        .details_title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
         }
-        .details {
-            .details_title {
-                font-weight: bold;
-                font-size: 20px;
-                margin-top: 10px;
-            }
-            ul li,
-            ol li {
-                margin-left: 25px;
-                letter-spacing: 2px;
-            }
+        ul li,
+        ol li {
+            margin-left: 25px;
+            letter-spacing: 2px;
         }
     }
 }
@@ -310,5 +311,16 @@ footer {
             color: red;
             font-size: 16px;
         }
+    }
+}
+
+.pds{
+    padding-top: 100px;
+}
+.p_title{
+    font-size: 24px;
+    font-weight: 600;
+    @media screen and (max-width: 500px) {
+     font-size: 20px;
     }
 }
